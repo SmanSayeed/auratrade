@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AuraTrade | Professional Trading Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                gold: '#F3BA2F',
+                goldHover: '#E2AB22',
+                black: '#0B0E11',
+                dark: '#181A20',
+                light: '#FFFFFF',
+                gray: '#474D57',
+                border: '#2B2F36'
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        --hero-fs-mobile: 32px;
+        --hero-lh-mobile: 38px;
+        --hero-fs-desktop: 72px;
+        --hero-lh-desktop: 86px;
+        
+        --h-fs-mobile: 28px;
+        --h-lh-mobile: 34px;
+        --h-fs-desktop: 48px;
+        --h-lh-desktop: 58px;
+
+        --sh-fs-mobile: 16px;
+        --sh-lh-mobile: 24px;
+        --sh-fs-desktop: 18px;
+        --sh-lh-desktop: 27px;
+      }
+
+      body {
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .hero-title {
+        font-size: var(--hero-fs-mobile);
+        line-height: var(--hero-lh-mobile);
+        font-weight: 700;
+      }
+      @media (min-width: 1024px) {
+        .hero-title {
+          font-size: var(--hero-fs-desktop);
+          line-height: var(--hero-lh-desktop);
+        }
+      }
+
+      .section-heading {
+        font-size: var(--h-fs-mobile);
+        line-height: var(--h-lh-mobile);
+        font-weight: 700;
+      }
+      @media (min-width: 1024px) {
+        .section-heading {
+          font-size: var(--h-fs-desktop);
+          line-height: var(--h-lh-desktop);
+        }
+      }
+
+      .sub-heading {
+        font-size: var(--sh-fs-mobile);
+        line-height: var(--sh-lh-mobile);
+        font-weight: 400;
+      }
+      @media (min-width: 1024px) {
+        .sub-heading {
+          font-size: var(--sh-fs-desktop);
+          line-height: var(--sh-lh-desktop);
+        }
+      }
+
+      .btn-text {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+      }
+
+      .glass-card {
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+      }
+      
+      .dark .glass-card {
+        background: rgba(24, 26, 32, 0.8);
+        border: 1px solid rgba(43, 47, 54, 0.5);
+      }
+      
+      .light .glass-card {
+        background: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+      }
+
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+      }
+
+      .gold-gradient-text {
+        background: linear-gradient(90deg, #F3BA2F 0%, #D4AF37 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "recharts": "https://esm.sh/recharts@^3.7.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-brand-light dark:bg-brand-black text-brand-black dark:text-[#EAECEF]">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
