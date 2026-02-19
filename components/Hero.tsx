@@ -3,7 +3,7 @@ import React from 'react';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative pt-16 pb-20 md:pt-24 md:pb-32 bg-brand-light dark:bg-brand-black">
+    <section className="relative pt-12 pb-16 md:pt-24 md:pb-32 bg-brand-light dark:bg-brand-black">
       {/* Background Shapes */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-30 dark:opacity-50 overflow-hidden -z-10">
         <div className="absolute top-[10%] left-[20%] w-[600px] h-[600px] bg-brand-gold/10 blur-[120px] rounded-full animate-pulse" />
@@ -30,7 +30,7 @@ export const Hero: React.FC = () => {
           AuraTrade empowers traders with state-of-the-art technology and deep market insight to help you succeed in the fast-paced world of trading. Dive into a seamless trading experience tailored to meet your investment goals.
         </p>
 
-        <button className="bg-brand-black dark:bg-brand-light text-white dark:text-brand-black px-12 py-5 rounded-md btn-text font-bold hover:bg-brand-gold dark:hover:bg-brand-gold transition-all mb-20 shadow-xl shadow-brand-gold/10">
+        <button className="bg-brand-gold text-brand-black px-12 py-5 rounded-lg btn-text font-bold hover:brightness-110 transition-all mb-16 shadow-xl shadow-brand-gold/20 scale-105">
           Start Trading Now
         </button>
 

@@ -9,7 +9,7 @@ const POSTS = [
 
 export const Blog: React.FC = () => {
   return (
-    <section className="py-24 bg-brand-light dark:bg-brand-black">
+    <section className="py-12 md:py-24 bg-brand-light dark:bg-brand-black">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-2xl">

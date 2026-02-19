@@ -14,29 +14,33 @@ export const FAQ: React.FC = () => {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   return (
-    <section className="py-24 bg-brand-light dark:bg-brand-black">
+    <section className="py-12 md:py-24 bg-brand-light dark:bg-brand-black">
       <div className="container mx-auto px-4 max-w-4xl text-center">
         <h2 className="section-heading text-brand-black dark:text-white mb-4">Frequently Asked <span className="gold-gradient-text">Questions</span></h2>
         <p className="sub-heading text-gray-500 mb-16">Hey there! Got questions? We've got answers. Check out our FAQ page for all the deets.</p>
-        
-        <div className="space-y-4">
+
+        <div className="max-w-3xl mx-auto space-y-0">
           {QUESTIONS.map((item, idx) => (
-            <div key={idx} className={`rounded-xl overflow-hidden transition-all ${openIdx === idx ? 'bg-[#E5F9E7] dark:bg-brand-gold/10' : 'bg-[#F2F3F5] dark:bg-brand-dark'}`}>
-              <button 
+            <div key={idx} className="border-b border-brand-black/5 dark:border-brand-border/40 group">
+              <button
                 onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
-                className="w-full flex items-center justify-between p-6 text-left"
+                className="w-full flex items-center justify-between py-8 px-2 text-left transition-all duration-300 hover:pl-4"
               >
-                <div className="flex items-center gap-6">
-                  <span className="text-sm font-bold opacity-60">{String(idx + 1).padStart(2, '0')}</span>
-                  <span className="text-lg font-bold text-brand-black dark:text-white">{item.q}</span>
+                <div className="flex items-center gap-8">
+                  <span className="text-sm font-medium text-brand-gold">{String(idx + 1).padStart(2, '0')}</span>
+                  <span className="text-lg md:text-xl font-bold text-brand-black dark:text-white group-hover:text-brand-gold transition-colors">{item.q}</span>
                 </div>
-                <span className="text-2xl font-bold">{openIdx === idx ? '−' : '+'}</span>
+                <div className={`w-8 h-8 rounded-full border border-brand-black/10 dark:border-brand-border/40 flex items-center justify-center transition-transform duration-300 ${openIdx === idx ? 'rotate-45' : ''}`}>
+                  <span className="text-xl font-light text-brand-black dark:text-white leading-none">+</span>
+                </div>
               </button>
-              {openIdx === idx && (
-                <div className="px-16 pb-8 pt-0 text-left text-sm text-gray-600 dark:text-gray-400">
+              <div
+                className={`overflow-hidden transition-all duration-500 ease-in-out ${openIdx === idx ? 'max-h-96 pb-10' : 'max-h-0'}`}
+              >
+                <p className="pl-16 pr-8 text-[15px] text-gray-500 dark:text-gray-400 leading-relaxed max-w-2xl">
                   {item.a}
-                </div>
-              )}
+                </p>
+              </div>
             </div>
           ))}
         </div>

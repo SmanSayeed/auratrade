@@ -12,7 +12,7 @@ const SERVICES = [
 
 export const TradingServices: React.FC = () => {
   return (
-    <section className="py-24 bg-brand-light dark:bg-brand-black">
+    <section className="py-12 md:py-24 bg-brand-black text-white relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="section-heading text-brand-black dark:text-white mb-4">
@@ -21,15 +21,17 @@ export const TradingServices: React.FC = () => {
           <p className="sub-heading text-gray-500">AuraTrade offers a full spectrum of services to enhance your trading experience.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {SERVICES.map((service, idx) => (
-            <div key={idx} className={`p-10 transition-all ${service.active ? 'bg-[#F9EBFF] dark:bg-brand-gold/10' : ''}`}>
-              <h4 className="text-xl font-bold text-brand-black dark:text-white mb-10">{service.title}</h4>
-              <div className="flex gap-6 items-start">
-                 <div className="w-12 h-12 flex items-center justify-center bg-brand-black dark:bg-brand-light text-white dark:text-brand-black rounded-lg shrink-0">
-                   {service.icon}
-                 </div>
-                 <p className="text-sm text-gray-500 leading-relaxed">{service.desc}</p>
+            <div key={idx} className={`p-8 rounded-2xl border border-white/5 transition-all duration-300 hover:bg-white/5 hover:border-brand-gold/20 group ${service.active ? 'bg-brand-gold/5 border-brand-gold/20' : 'bg-transparent'}`}>
+              <div className="flex flex-col h-full">
+                <div className="w-12 h-12 flex items-center justify-center bg-brand-gold/10 text-brand-gold rounded-xl mb-6 group-hover:scale-110 transition-transform">
+                  <span className="text-2xl">{service.icon}</span>
+                </div>
+                <h4 className="text-lg font-bold text-white mb-3 group-hover:text-brand-gold transition-colors">{service.title}</h4>
+                <p className="text-[14px] text-gray-400 leading-relaxed font-medium">
+                  {service.desc}
+                </p>
               </div>
             </div>
           ))}

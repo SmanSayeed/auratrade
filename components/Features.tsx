@@ -10,7 +10,7 @@ const FEATURE_LIST = [
 
 export const Features: React.FC = () => {
   return (
-    <section className="py-24 relative bg-brand-light dark:bg-brand-black transition-colors duration-300">
+    <section className="py-12 md:py-24 relative bg-brand-light dark:bg-brand-black transition-colors duration-300">
       {/* Premium Gradient Background - Theme aware */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(212,175,55,0.08),transparent_40%),radial-gradient(circle_at_bottom_right,rgba(139,92,246,0.08),transparent_40%)] dark:bg-[radial-gradient(circle_at_top_left,rgba(212,175,55,0.03),transparent_40%),radial-gradient(circle_at_bottom_right,rgba(139,92,246,0.03),transparent_40%)] -z-10" />
 
@@ -27,7 +27,7 @@ export const Features: React.FC = () => {
             <img src="/coin2.webp" alt="Coin" className="w-full h-auto drop-shadow-xl" />
           </div>
 
-         
+
 
           <div className="text-center relative z-10 max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-brand-black dark:text-white mb-6 tracking-tight">
