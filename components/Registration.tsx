@@ -3,7 +3,7 @@ import React from 'react';
 
 export const Registration: React.FC = () => {
   return (
-    <section className="py-12 md:py-24 bg-brand-light dark:bg-brand-black">
+    <section className="py-6 md:py-12 bg-brand-light dark:bg-brand-black">
       <div className="container mx-auto px-4">
         <div className="bg-[#F2F3F5] dark:bg-brand-dark/30 rounded-[2rem] md:rounded-[3rem] p-6 py-12 md:p-12 lg:p-20 flex flex-col items-center gap-10 relative overflow-hidden">
 

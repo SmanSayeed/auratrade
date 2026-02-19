@@ -3,7 +3,7 @@ import React from 'react';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative pt-12 pb-16 md:pt-24 md:pb-32 bg-brand-light dark:bg-brand-black">
+    <section className="relative pt-6 pb-6 md:pt-12 md:pb-12 bg-brand-light dark:bg-brand-black">
       {/* Background Shapes */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-30 dark:opacity-50 overflow-hidden -z-10">
         <div className="absolute top-[10%] left-[20%] w-[600px] h-[600px] bg-brand-gold/10 blur-[120px] rounded-full animate-pulse" />

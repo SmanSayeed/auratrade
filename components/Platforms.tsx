@@ -3,7 +3,7 @@ import React from 'react';
 
 export const Platforms: React.FC = () => {
   return (
-    <section className="py-12 md:py-24 bg-brand-light dark:bg-brand-black">
+    <section className="py-6 md:py-12 bg-brand-light dark:bg-brand-black">
       <div className="container mx-auto px-4 text-center">
         <h2 className="section-heading text-brand-black dark:text-white mb-4">
           Versatile <span className="gold-gradient-text">Trading Platforms!</span>

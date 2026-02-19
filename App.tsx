@@ -41,7 +41,7 @@ const App: React.FC = () => {
         <Platforms />
         <SuccessSection />
         <TradingServices />
-        <AccountOptions />
+        {/* <AccountOptions /> */}
         <Reviews />
         <FAQ />
         <Blog />

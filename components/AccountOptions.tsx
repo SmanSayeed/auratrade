@@ -11,7 +11,7 @@ const ACCOUNTS = [
 
 export const AccountOptions: React.FC = () => {
   return (
-    <section className="py-12 md:py-24 bg-brand-light dark:bg-brand-black">
+    <section className="py-6 md:py-12 bg-brand-light dark:bg-brand-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-20">
           <h2 className="section-heading text-brand-black dark:text-white mb-4">

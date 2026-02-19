@@ -28,7 +28,7 @@ export const Reviews: React.FC = () => {
   }, [nextSlide]);
 
   return (
-    <section className="py-12 md:py-24 bg-brand-light dark:bg-brand-black transition-colors duration-300">
+    <section className="py-6 md:py-12 bg-brand-light dark:bg-brand-black transition-colors duration-300">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-start mb-16 gap-8">
           <div className="max-w-xl">

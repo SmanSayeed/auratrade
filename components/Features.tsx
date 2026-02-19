@@ -10,7 +10,7 @@ const FEATURE_LIST = [
 
 export const Features: React.FC = () => {
   return (
-    <section className="py-12 md:py-24 relative bg-brand-light dark:bg-brand-black transition-colors duration-300">
+    <section className="py-6 md:py-12 relative bg-brand-light dark:bg-brand-black transition-colors duration-300">
       {/* Premium Gradient Background - Theme aware */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(212,175,55,0.08),transparent_40%),radial-gradient(circle_at_bottom_right,rgba(139,92,246,0.08),transparent_40%)] dark:bg-[radial-gradient(circle_at_top_left,rgba(212,175,55,0.03),transparent_40%),radial-gradient(circle_at_bottom_right,rgba(139,92,246,0.03),transparent_40%)] -z-10" />
 
