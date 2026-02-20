@@ -11,16 +11,16 @@ const ACCOUNTS = [
 
 export const AccountOptions: React.FC = () => {
   return (
-    <section className="py-16 md:py-24 bg-brand-light dark:bg-brand-black">
+    <section className="py-6 md:py-12 bg-brand-light dark:bg-brand-black">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-20">
+        <div className="text-center mb-10">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-center leading-[1.2] text-brand-black dark:text-white mb-4">
             Account Options <span className="gold-gradient-text">To Suit Every Trader</span>
           </h2>
           <p className="text-gray-500 dark:text-gray-400 text-sm md:text-base max-w-2xl mx-auto text-center font-medium">Choose an account that fits your trading style and growth ambitions.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-20 md:gap-4 lg:gap-0 items-start pt-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 md:gap-4 lg:gap-0 items-start pt-8">
           {ACCOUNTS.map((acc, idx) => (
             <div key={idx} className={`relative flex flex-col border-2 ${acc.featured ? 'z-10 shadow-2xl scale-105 border-brand-black dark:border-brand-gold' : 'border-brand-black/10 dark:border-brand-border'} bg-white dark:bg-brand-dark transition-all hover:translate-y-[-10px]`}>
 

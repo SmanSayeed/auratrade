@@ -10,13 +10,13 @@ const FEATURE_LIST = [
 
 export const Features: React.FC = () => {
   return (
-    <section className="py-16 md:py-24 relative bg-brand-light dark:bg-brand-black transition-colors duration-300">
+    <section className="py-6 md:py-12 relative bg-brand-light dark:bg-brand-black transition-colors duration-300">
       {/* Premium Gradient Background - Theme aware */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(212,175,55,0.08),transparent_40%),radial-gradient(circle_at_bottom_right,rgba(139,92,246,0.08),transparent_40%)] dark:bg-[radial-gradient(circle_at_top_left,rgba(212,175,55,0.03),transparent_40%),radial-gradient(circle_at_bottom_right,rgba(139,92,246,0.03),transparent_40%)] -z-10" />
 
       <div className="container mx-auto px-4">
         {/* Card without overflow-hidden to allow coins to peek out */}
-        <div className="bg-white/70 dark:bg-brand-dark/40 backdrop-blur-md border border-brand-gold/10 dark:border-brand-border rounded-[3rem] p-12 md:p-20 relative">
+        <div className="bg-white/70 dark:bg-brand-dark/40 backdrop-blur-md border border-brand-gold/10 dark:border-brand-border rounded-[3rem] p-6 md:p-10 relative">
 
           {/* Decorative Coins - coin2.webp in 3 places with hover effects */}
           <div className="absolute -top-6 -left-6 w-24 md:w-32 opacity-90 animate-float pointer-events-none group/coin transition-all duration-500 hover:scale-110 hover:rotate-12">
@@ -27,7 +27,7 @@ export const Features: React.FC = () => {
             <img src="/coin2.webp" alt="Coin" className="w-full h-auto drop-shadow-xl" />
           </div>
 
-          <div className="text-center mb-16 relative z-10">
+          <div className="text-center mb-8 relative z-10">
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-center leading-[1.2] text-brand-black dark:text-white mb-4">
               Our Key <span className="gold-gradient-text">Features!</span>
             </h2>

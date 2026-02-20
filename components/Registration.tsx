@@ -3,15 +3,15 @@ import React from 'react';
 
 export const Registration: React.FC = () => {
   return (
-    <section className="py-16 md:py-24 bg-brand-light dark:bg-brand-black">
+    <section className="py-6 md:py-12 bg-brand-light dark:bg-brand-black">
       <div className="container mx-auto px-4">
-        <div className="bg-[#F2F3F5] dark:bg-brand-dark/30 rounded-[2rem] md:rounded-[3rem] p-4 py-10 md:p-12 lg:p-20 flex flex-col items-center gap-8 relative overflow-hidden">
+        <div className="bg-[#F2F3F5] dark:bg-brand-dark/30 rounded-[2rem] md:rounded-[3rem] p-4 py-6 md:p-8 lg:p-12 flex flex-col items-center gap-4 relative overflow-hidden">
 
           <div className="w-full max-w-2xl flex items-center justify-center flex-col text-center">
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-center leading-[1.2] text-brand-black dark:text-white mb-4">
               Open your account <span className="gold-gradient-text">with AuraTrade</span>
             </h2>
-            <p className="text-gray-500 dark:text-gray-400 text-sm md:text-base font-medium max-w-lg mb-8">
+            <p className="text-gray-500 dark:text-gray-400 text-sm md:text-base font-medium max-w-lg mb-4">
               Enjoy the advantages of an award-winning platform and elevate your trades to the next level.
             </p>
 

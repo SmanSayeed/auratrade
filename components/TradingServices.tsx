@@ -12,9 +12,9 @@ const SERVICES = [
 
 export const TradingServices: React.FC = () => {
   return (
-    <section className="py-16 md:py-24 bg-brand-black text-white relative overflow-hidden">
+    <section className="py-6 md:py-12 bg-brand-black text-white relative overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-center leading-[1.2] text-white mb-4">
             Comprehensive <span className="gold-gradient-text">Trading Services</span>
           </h2>

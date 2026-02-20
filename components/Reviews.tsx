@@ -28,9 +28,9 @@ export const Reviews: React.FC = () => {
   }, [nextSlide]);
 
   return (
-    <section className="py-16 md:py-24 bg-brand-light dark:bg-brand-black transition-colors duration-300">
+    <section className="py-6 md:py-12 bg-brand-light dark:bg-brand-black transition-colors duration-300">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center md:items-start text-center md:text-left mb-16 gap-10">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-start text-center md:text-left mb-8 gap-10">
           <div className="max-w-xl">
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-center md:text-left leading-[1.2] text-brand-black dark:text-white mb-6">
               Reviews of AuraTrade: <br className="hidden md:block" />
@@ -88,7 +88,7 @@ export const Reviews: React.FC = () => {
         </div>
 
         {/* Indicators */}
-        <div className="flex justify-center gap-2 mt-12">
+        <div className="flex justify-center gap-2 mt-6">
           {Array.from({ length: totalSlides }).map((_, idx) => (
             <button
               key={idx}
