@@ -5,8 +5,8 @@ export const Footer: React.FC = () => {
   return (
     <footer className="bg-brand-light dark:bg-brand-black pt-24 pb-12 border-t border-brand-black/5 dark:border-brand-border">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-20">
-          <div className="col-span-2 lg:col-span-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-20">
+          <div className="sm:col-span-2 lg:col-span-4 text-center lg:text-left flex flex-col items-center lg:items-start">
             <div className="flex items-center gap-2 mb-8">
               <div className="w-8 h-8 bg-brand-gold rounded-full flex items-center justify-center">
                 <span className="text-brand-black font-bold text-xl">A</span>
@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          <div className="col-span-1 lg:col-span-2">
+          <div className="col-span-1 lg:col-span-2 text-center lg:text-left">
             <h4 className="font-bold text-brand-black dark:text-white mb-8 text-sm uppercase tracking-wider">Services</h4>
             <ul className="space-y-4 text-[13px] font-medium text-gray-500">
               <li><a href="#" className="hover:text-brand-gold transition-colors">Forex Trading</a></li>
@@ -32,7 +32,7 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          <div className="col-span-1 lg:col-span-2">
+          <div className="col-span-1 lg:col-span-2 text-center lg:text-left">
             <h4 className="font-bold text-brand-black dark:text-white mb-8 text-sm uppercase tracking-wider">Support</h4>
             <ul className="space-y-4 text-[13px] font-medium text-gray-500">
               <li><a href="#" className="hover:text-brand-gold transition-colors">Help Center</a></li>
@@ -42,7 +42,7 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          <div className="col-span-1 lg:col-span-2">
+          <div className="col-span-1 lg:col-span-2 text-center lg:text-left">
             <h4 className="font-bold text-brand-black dark:text-white mb-8 text-sm uppercase tracking-wider">Company</h4>
             <ul className="space-y-4 text-[13px] font-medium text-gray-500">
               <li><a href="#" className="hover:text-brand-gold transition-colors">About Us</a></li>
@@ -52,7 +52,7 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          <div className="col-span-1 lg:col-span-2">
+          <div className="col-span-1 lg:col-span-2 text-center lg:text-left">
             <h4 className="font-bold text-brand-black dark:text-white mb-8 text-sm uppercase tracking-wider">Legal</h4>
             <ul className="space-y-4 text-[13px] font-medium text-gray-500">
               <li><a href="#" className="hover:text-brand-gold transition-colors">Terms of Use</a></li>

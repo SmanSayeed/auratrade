@@ -14,10 +14,10 @@ export const FAQ: React.FC = () => {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   return (
-    <section className="py-12 md:py-24 bg-brand-light dark:bg-brand-black">
+    <section className="py-16 md:py-24 bg-brand-light dark:bg-brand-black">
       <div className="container mx-auto px-4 max-w-4xl text-center">
-        <h2 className="section-heading text-brand-black dark:text-white mb-4">Frequently Asked <span className="gold-gradient-text">Questions</span></h2>
-        <p className="sub-heading text-gray-500 mb-16">Hey there! Got questions? We've got answers. Check out our FAQ page for all the deets.</p>
+        <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-center leading-[1.2] text-brand-black dark:text-white mb-4">Frequently Asked <span className="gold-gradient-text">Questions</span></h2>
+        <p className="text-gray-500 dark:text-gray-400 text-sm md:text-base max-w-2xl mx-auto text-center font-medium mb-16">Hey there! Got questions? We've got answers. Check out our FAQ page for all the deets.</p>
 
         <div className="max-w-3xl mx-auto space-y-0">
           {QUESTIONS.map((item, idx) => (

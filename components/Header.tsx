@@ -50,17 +50,17 @@ export const Header: React.FC<HeaderProps> = ({ theme, onToggleTheme }) => {
           <nav className="hidden lg:flex items-center justify-center flex-grow gap-4 xl:gap-6 text-[11px] font-bold text-gray-700 dark:text-gray-300">
             {navLinks.map((item) => (
               <a key={item.name} href={item.href} className="flex items-center gap-1 hover:text-brand-gold transition-colors whitespace-nowrap">
-                {item.name} 
+                {item.name}
               </a>
             ))}
           </nav>
 
           {/* Actions & Theme Toggle */}
           <div className="flex items-center gap-2 md:gap-4 shrink-0">
-            <button className="bg-brand-black text-white dark:bg-white dark:text-brand-black px-3 md:px-4 py-1.5 rounded text-[10px] font-bold uppercase tracking-wider hover:brightness-125 transition-all">
+            <button className="bg-brand-black text-white dark:bg-white dark:text-brand-black px-4 md:px-6 py-2 md:py-2.5 rounded-xl text-[10px] md:text-xs font-extrabold uppercase tracking-wider hover:brightness-125 transition-all active:scale-95">
               SIGN UP
             </button>
-            <button className="hidden sm:block border border-brand-black/20 dark:border-white/20 px-4 py-1.5 rounded text-[10px] font-bold uppercase tracking-wider hover:bg-brand-gold hover:text-brand-black hover:border-brand-gold transition-all text-brand-black dark:text-white">
+            <button className="hidden sm:block border border-brand-black/20 dark:border-white/20 px-4 md:px-6 py-2 md:py-2.5 rounded-xl text-[10px] md:text-xs font-extrabold uppercase tracking-wider hover:bg-brand-gold hover:text-brand-black hover:border-brand-gold transition-all text-brand-black dark:text-white active:scale-95">
               SIGN IN
             </button>
 
@@ -123,8 +123,8 @@ export const Header: React.FC<HeaderProps> = ({ theme, onToggleTheme }) => {
                 </a>
               ))}
               <div className="pt-6 border-t border-black/5 dark:border-white/10 space-y-4">
-                <button className="w-full bg-brand-black text-white dark:bg-white dark:text-brand-black py-3 rounded-lg font-bold">SIGN UP</button>
-                <button className="w-full border border-brand-black/20 dark:border-white/20 dark:text-white py-3 rounded-lg font-bold">SIGN IN</button>
+                <button className="w-full bg-brand-black text-white dark:bg-white dark:text-brand-black py-4 rounded-xl font-extrabold hover:brightness-110 active:scale-95 uppercase tracking-wider text-xs">SIGN UP</button>
+                <button className="w-full border border-brand-black/20 dark:border-white/20 dark:text-white py-4 rounded-xl font-extrabold hover:bg-brand-gold hover:text-brand-black active:scale-95 uppercase tracking-wider text-xs">SIGN IN</button>
               </div>
             </nav>
 

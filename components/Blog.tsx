@@ -9,14 +9,14 @@ const POSTS = [
 
 export const Blog: React.FC = () => {
   return (
-    <section className="py-6 md:py-12 bg-brand-light dark:bg-brand-black">
+    <section className="py-16 md:py-24 bg-brand-light dark:bg-brand-black">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-          <div className="max-w-2xl">
-            <h2 className="section-heading text-brand-black dark:text-white mb-2">Insights And <span className="gold-gradient-text">Updates</span></h2>
-            <p className="text-gray-500 text-sm">We love connecting with our clients to hear about their experiences and how we can improve.</p>
+          <div className="max-w-2xl text-center md:text-left">
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-[1.2] text-brand-black dark:text-white mb-4">Insights And <span className="gold-gradient-text">Updates</span></h2>
+            <p className="text-gray-500 dark:text-gray-400 text-sm md:text-base font-medium">We love connecting with our clients to hear about their experiences and how we can improve.</p>
           </div>
-          <button className="bg-[#B5F1B9] text-brand-black px-6 py-2 rounded-md font-bold text-xs hover:brightness-105 transition-all">View our blog</button>
+          <button className="border border-brand-black/10 dark:border-white/10 px-6 py-3 rounded-xl font-extrabold text-xs uppercase tracking-wider transition-all hover:bg-brand-gold hover:text-brand-black hover:border-brand-gold active:scale-95 mx-auto md:mx-0">View our blog</button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

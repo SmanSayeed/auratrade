@@ -10,7 +10,7 @@ const FEATURE_LIST = [
 
 export const Features: React.FC = () => {
   return (
-    <section className="py-6 md:py-12 relative bg-brand-light dark:bg-brand-black transition-colors duration-300">
+    <section className="py-16 md:py-24 relative bg-brand-light dark:bg-brand-black transition-colors duration-300">
       {/* Premium Gradient Background - Theme aware */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(212,175,55,0.08),transparent_40%),radial-gradient(circle_at_bottom_right,rgba(139,92,246,0.08),transparent_40%)] dark:bg-[radial-gradient(circle_at_top_left,rgba(212,175,55,0.03),transparent_40%),radial-gradient(circle_at_bottom_right,rgba(139,92,246,0.03),transparent_40%)] -z-10" />
 
@@ -27,31 +27,29 @@ export const Features: React.FC = () => {
             <img src="/coin2.webp" alt="Coin" className="w-full h-auto drop-shadow-xl" />
           </div>
 
-
-
-          <div className="text-center relative z-10 max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold text-brand-black dark:text-white mb-6 tracking-tight">
-              Built For <span className="gold-gradient-text">Trader Success!</span>
+          <div className="text-center mb-16 relative z-10">
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-center leading-[1.2] text-brand-black dark:text-white mb-4">
+              Our Key <span className="gold-gradient-text">Features!</span>
             </h2>
-            <p className="text-gray-500 dark:text-gray-400 mb-20 text-sm md:text-base font-medium max-w-2xl mx-auto">
-              Discover the features that set Seekapa apart in the world of online trading and elevate your professional experience.
+            <p className="text-gray-500 dark:text-gray-400 text-sm md:text-base max-w-2xl mx-auto text-center font-medium">
+              Discover why traders choose AuraTrade for their investment journey.
             </p>
+          </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-              {FEATURE_LIST.map((item, idx) => (
-                <div key={idx} className="flex flex-col items-center group">
-                  <div className="w-16 h-16 bg-brand-black dark:bg-brand-light rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-2xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:bg-brand-gold dark:group-hover:bg-brand-gold">
-                    <span className="filter drop-shadow-sm group-hover:scale-110 transition-transform">{item.icon}</span>
-                  </div>
-                  <h3 className="text-lg font-bold text-brand-black dark:text-white mb-3 group-hover:text-brand-gold transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-[13px] text-gray-500 dark:text-gray-400 leading-relaxed font-medium">
-                    {item.desc}
-                  </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+            {FEATURE_LIST.map((item, idx) => (
+              <div key={idx} className="flex flex-col items-center group">
+                <div className="w-16 h-16 bg-brand-black dark:bg-brand-light rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-2xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:bg-brand-gold dark:group-hover:bg-brand-gold">
+                  <span className="filter drop-shadow-sm group-hover:scale-110 transition-transform">{item.icon}</span>
                 </div>
-              ))}
-            </div>
+                <h3 className="text-lg font-bold text-brand-black dark:text-white mb-3 group-hover:text-brand-gold transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-[13px] text-gray-500 dark:text-gray-400 leading-relaxed font-medium">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

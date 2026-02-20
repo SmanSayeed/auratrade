@@ -11,13 +11,13 @@ const ACCOUNTS = [
 
 export const AccountOptions: React.FC = () => {
   return (
-    <section className="py-6 md:py-12 bg-brand-light dark:bg-brand-black">
+    <section className="py-16 md:py-24 bg-brand-light dark:bg-brand-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-20">
-          <h2 className="section-heading text-brand-black dark:text-white mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-center leading-[1.2] text-brand-black dark:text-white mb-4">
             Account Options <span className="gold-gradient-text">To Suit Every Trader</span>
           </h2>
-          <p className="sub-heading text-gray-500">Choose an account that fits your trading style and growth ambitions.</p>
+          <p className="text-gray-500 dark:text-gray-400 text-sm md:text-base max-w-2xl mx-auto text-center font-medium">Choose an account that fits your trading style and growth ambitions.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-20 md:gap-4 lg:gap-0 items-start pt-14">
@@ -44,7 +44,7 @@ export const AccountOptions: React.FC = () => {
                   <div className="flex items-center gap-2 justify-center text-green-500"><span>✔</span> Market Analysis & Insights</div>
                 </div>
 
-                <button className="w-full bg-brand-black dark:bg-brand-light text-white dark:text-brand-black font-bold py-3 rounded text-sm hover:bg-brand-gold transition-colors">
+                <button className="w-full bg-brand-black dark:bg-brand-light text-white dark:text-brand-black px-6 py-4 rounded-xl font-extrabold text-sm uppercase tracking-wider transition-all hover:bg-brand-gold active:scale-95">
                   Choose Plan
                 </button>
               </div>

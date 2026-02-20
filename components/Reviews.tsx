@@ -28,15 +28,15 @@ export const Reviews: React.FC = () => {
   }, [nextSlide]);
 
   return (
-    <section className="py-6 md:py-12 bg-brand-light dark:bg-brand-black transition-colors duration-300">
+    <section className="py-16 md:py-24 bg-brand-light dark:bg-brand-black transition-colors duration-300">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-start mb-16 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-start text-center md:text-left mb-16 gap-10">
           <div className="max-w-xl">
-            <h2 className="text-3xl md:text-5xl font-bold text-brand-black dark:text-white mb-6">
-              Reviews of AuraTrade: <br />
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-center md:text-left leading-[1.2] text-brand-black dark:text-white mb-6">
+              Reviews of AuraTrade: <br className="hidden md:block" />
               <span className="gold-gradient-text">What Our Users Are Saying</span>
             </h2>
-            <p className="text-gray-500 dark:text-gray-400 text-sm md:text-base">
+            <p className="text-gray-500 dark:text-gray-400 text-sm md:text-base font-medium">
               AuraTrade is committed to providing traders with a seamless and innovative experience.
               Join thousands of satisfied traders worldwide.
             </p>
@@ -44,15 +44,15 @@ export const Reviews: React.FC = () => {
           <div className="flex gap-4">
             <button
               onClick={prevSlide}
-              className="w-12 h-12 border border-brand-black/10 dark:border-brand-border rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-black transition-all group active:scale-95"
+              className="w-10 h-10 md:w-12 md:h-12 border border-brand-black/10 dark:border-brand-border rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-black transition-all group active:scale-95"
             >
-              <span className="group-hover:-translate-x-0.5 transition-transform text-xl">←</span>
+              <span className="group-hover:-translate-x-0.5 transition-transform text-lg md:text-xl">←</span>
             </button>
             <button
               onClick={nextSlide}
-              className="w-12 h-12 border border-brand-black/10 dark:border-brand-border rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-black transition-all group active:scale-95"
+              className="w-10 h-10 md:w-12 md:h-12 border border-brand-black/10 dark:border-brand-border rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-black transition-all group active:scale-95"
             >
-              <span className="group-hover:translate-x-0.5 transition-transform text-xl">→</span>
+              <span className="group-hover:translate-x-0.5 transition-transform text-lg md:text-xl">→</span>
             </button>
           </div>
         </div>

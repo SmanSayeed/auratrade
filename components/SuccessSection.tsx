@@ -3,14 +3,14 @@ import React from 'react';
 
 export const SuccessSection: React.FC = () => {
   return (
-    <section className="py-6 md:py-12 bg-brand-light dark:bg-brand-black overflow-hidden">
+    <section className="py-16 md:py-24 bg-brand-light dark:bg-brand-black overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center gap-16">
-          <div className="w-full lg:w-1/2">
-            <h2 className="section-heading text-brand-black dark:text-white mb-6">
+        <div className="flex flex-col lg:flex-row items-center gap-16 text-center lg:text-left">
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-center lg:text-left leading-[1.2] text-brand-black dark:text-white mb-6">
               Committed To <span className="gold-gradient-text">Your Success</span>
             </h2>
-            <p className="sub-heading mb-12 text-gray-600 dark:text-gray-400">
+            <p className="text-gray-500 dark:text-gray-400 text-sm md:text-base font-medium mb-12">
               Our customer support goes beyond just solving issues. We ensure your trading journey is smooth and successful with:
             </p>
 
@@ -30,7 +30,7 @@ export const SuccessSection: React.FC = () => {
               ))}
             </div>
 
-            <button className="mt-12 bg-brand-black dark:bg-brand-light text-white dark:text-brand-black px-12 py-4 rounded-md font-bold hover:bg-brand-gold transition-all">
+            <button className="mt-12 bg-brand-black dark:bg-brand-light text-white dark:text-brand-black px-8 md:px-12 py-4 md:py-5 rounded-xl font-extrabold text-sm uppercase tracking-wider transition-all hover:brightness-110 active:scale-95 shadow-lg shadow-black/5 dark:shadow-white/5">
               Contact Support
             </button>
           </div>

@@ -12,13 +12,13 @@ const SERVICES = [
 
 export const TradingServices: React.FC = () => {
   return (
-    <section className="py-12 md:py-24 bg-brand-black text-white relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-brand-black text-white relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="section-heading text-brand-black dark:text-white mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-center leading-[1.2] text-white mb-4">
             Comprehensive <span className="gold-gradient-text">Trading Services</span>
           </h2>
-          <p className="sub-heading text-gray-500">AuraTrade offers a full spectrum of services to enhance your trading experience.</p>
+          <p className="text-gray-400 text-sm md:text-base max-w-2xl mx-auto text-center font-medium">AuraTrade offers a full spectrum of services to enhance your trading experience.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

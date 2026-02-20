@@ -3,13 +3,13 @@ import React from 'react';
 
 export const Platforms: React.FC = () => {
   return (
-    <section className="py-6 md:py-12 bg-brand-light dark:bg-brand-black">
+    <section className="py-16 md:py-24 bg-brand-light dark:bg-brand-black">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="section-heading text-brand-black dark:text-white mb-4">
+        <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-center leading-[1.2] text-brand-black dark:text-white mb-4">
           Versatile <span className="gold-gradient-text">Trading Platforms!</span>
         </h2>
-        <p className="sub-heading mb-16 max-w-4xl mx-auto text-gray-600 dark:text-gray-400">
-          Choose from our range of platforms, including mobile and web-based options, to trade anytime, anywhere. Experience flexibility and power at your fingertips.
+        <p className="text-gray-500 dark:text-gray-400 text-sm md:text-base max-w-2xl mx-auto text-center font-medium mb-16">
+          AuraTrade provides you with the most advanced and flexible platforms to trade anytime, anywhere.
         </p>
 
         <div className="max-w-4xl mx-auto relative mb-12">
