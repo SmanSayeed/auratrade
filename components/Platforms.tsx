@@ -12,7 +12,7 @@ export const Platforms: React.FC = () => {
           AuraTrade provides you with the most advanced and flexible platforms to trade anytime, anywhere.
         </p>
 
-        <div className="max-w-4xl mx-auto relative mb-6">
+        {/* <div className="max-w-4xl mx-auto relative mb-6">
           <div className="rounded-[2rem] overflow-hidden shadow-2xl shadow-brand-gold/10 border border-brand-black/5 dark:border-brand-border bg-black aspect-video relative">
             <video
               src="/seekapavideo.mp4"
@@ -24,7 +24,7 @@ export const Platforms: React.FC = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-brand-black/40 to-transparent pointer-events-none" />
           </div>
-        </div>
+        </div> */}
 
         <button className="bg-brand-black dark:bg-brand-light text-white dark:text-brand-black px-12 py-3 rounded-md font-bold text-sm hover:bg-brand-gold transition-all">
           Explore Our Platforms

@@ -19,13 +19,13 @@ export const Features: React.FC = () => {
         <div className="bg-white/70 dark:bg-brand-dark/40 backdrop-blur-md border border-brand-gold/10 dark:border-brand-border rounded-[3rem] p-6 md:p-10 relative">
 
           {/* Decorative Coins - coin2.webp in 3 places with hover effects */}
-          <div className="absolute -top-6 -left-6 w-24 md:w-32 opacity-90 animate-float pointer-events-none group/coin transition-all duration-500 hover:scale-110 hover:rotate-12">
+          {/* <div className="absolute -top-6 -left-6 w-24 md:w-32 opacity-90 animate-float pointer-events-none group/coin transition-all duration-500 hover:scale-110 hover:rotate-12">
             <img src="/coin2.webp" alt="Coin" className="w-full h-auto drop-shadow-2xl" />
-          </div>
+          </div> */}
 
-          <div className="absolute top-1/2 -right-8 -translate-y-1/2 w-20 md:w-28 opacity-80 animate-float pointer-events-none transition-all duration-500 hover:scale-125 hover:-rotate-12" style={{ animationDelay: '1s' }}>
+          {/* <div className="absolute top-1/2 -right-8 -translate-y-1/2 w-20 md:w-28 opacity-80 animate-float pointer-events-none transition-all duration-500 hover:scale-125 hover:-rotate-12" style={{ animationDelay: '1s' }}>
             <img src="/coin2.webp" alt="Coin" className="w-full h-auto drop-shadow-xl" />
-          </div>
+          </div> */}
 
           <div className="text-center mb-8 relative z-10">
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-center leading-[1.2] text-brand-black dark:text-white mb-4">
