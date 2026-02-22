@@ -82,7 +82,7 @@ export const Hero: React.FC = () => {
       <div className="absolute bottom-[-20%] right-[-5%] w-[600px] h-[600px] rounded-full pointer-events-none opacity-20 dark:opacity-100"
         style={{ background: 'radial-gradient(circle, rgba(99,102,241,0.1) 0%, transparent 70%)' }} />
 
-      <div className="relative container mx-auto px-4 pt-24 pb-16 md:pt-32 md:pb-20 flex flex-col lg:flex-row items-center gap-12 lg:gap-8 min-h-screen">
+      <div className="relative container mx-auto px-4 pt-8 md:pt-10 pb-16 md:pt-32 md:pb-20 flex flex-col lg:flex-row items-center gap-12 lg:gap-8 min-h-screen">
 
         {/* ══════════ LEFT — Copy ══════════ */}
         <div className="flex-1 max-w-2xl z-10">
