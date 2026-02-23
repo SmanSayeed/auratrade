@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AuraTrade | Professional Trading Platform</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Nacelle Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nacelle:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         darkMode: 'class',
@@ -26,38 +27,57 @@
               }
             },
             fontFamily: {
-              sans: ['Inter', 'system-ui', 'sans-serif'],
+              sans: ['Nacelle', 'Inter', 'system-ui', 'sans-serif'],
             },
           }
         }
       }
     </script>
     <style>
-      :root {
-        --hero-fs-mobile: 32px;
-        --hero-lh-mobile: 38px;
-        --hero-fs-desktop: 72px;
-        --hero-lh-desktop: 86px;
-        
-        --h-fs-mobile: 28px;
-        --h-lh-mobile: 34px;
-        --h-fs-desktop: 48px;
-        --h-lh-desktop: 58px;
+      @import url('https://fonts.googleapis.com/css2?family=Nacelle:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-        --sh-fs-mobile: 16px;
-        --sh-lh-mobile: 24px;
-        --sh-fs-desktop: 18px;
-        --sh-lh-desktop: 27px;
+      * { box-sizing: border-box; }
+
+      html, body {
+        font-family: 'Nacelle', 'Inter', system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
       }
 
       body {
         transition: background-color 0.3s ease, color 0.3s ease;
       }
 
+      /* ─── Typography Scale ─── */
+      :root {
+        /* Hero */
+        --hero-fs-mobile: 32px;
+        --hero-lh-mobile: 38px;
+        --hero-fs-desktop: 72px;
+        --hero-lh-desktop: 86px;
+
+        /* Section Heading */
+        --h-fs-mobile: 28px;
+        --h-lh-mobile: 34px;
+        --h-fs-desktop: 48px;
+        --h-lh-desktop: 58px;
+
+        /* Sub-heading */
+        --sh-fs-mobile: 16px;
+        --sh-lh-mobile: 24px;
+        --sh-fs-desktop: 18px;
+        --sh-lh-desktop: 27px;
+
+        /* Other headings */
+        --other-fs: 24px;
+        --other-lh: 29px;
+      }
+
       .hero-title {
         font-size: var(--hero-fs-mobile);
         line-height: var(--hero-lh-mobile);
         font-weight: 700;
+        font-family: 'Nacelle', sans-serif;
       }
       @media (min-width: 1024px) {
         .hero-title {
@@ -70,6 +90,7 @@
         font-size: var(--h-fs-mobile);
         line-height: var(--h-lh-mobile);
         font-weight: 700;
+        font-family: 'Nacelle', sans-serif;
       }
       @media (min-width: 1024px) {
         .section-heading {
@@ -82,6 +103,7 @@
         font-size: var(--sh-fs-mobile);
         line-height: var(--sh-lh-mobile);
         font-weight: 400;
+        font-family: 'Nacelle', sans-serif;
       }
       @media (min-width: 1024px) {
         .sub-heading {
@@ -90,40 +112,121 @@
         }
       }
 
+      .other-heading {
+        font-size: var(--other-fs);
+        line-height: var(--other-lh);
+        font-weight: 700;
+        font-family: 'Nacelle', sans-serif;
+      }
+
+      /* Button text standard */
       .btn-text {
         font-size: 16px;
         line-height: 24px;
         font-weight: 500;
+        font-family: 'Nacelle', sans-serif;
       }
 
+      /* Primary (gold) button */
+      .btn-primary {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+        font-family: 'Nacelle', sans-serif;
+        background: linear-gradient(135deg, #F3BA2F 0%, #e2a90b 100%);
+        color: #0B0E11;
+        border: none;
+        cursor: pointer;
+        transition: all 0.25s ease;
+      }
+      .btn-primary:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 8px 24px rgba(243,186,47,0.4);
+      }
+      .btn-primary:active { transform: scale(0.97); }
+
+      /* Outline button */
+      .btn-outline {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+        font-family: 'Nacelle', sans-serif;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.25s ease;
+      }
+
+      /* Glass cards */
       .glass-card {
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(12px);
         transition: all 0.3s ease;
       }
-      
       .dark .glass-card {
-        background: rgba(24, 26, 32, 0.8);
-        border: 1px solid rgba(43, 47, 54, 0.5);
+        background: rgba(24, 26, 32, 0.85);
+        border: 1px solid rgba(43, 47, 54, 0.6);
       }
-      
       .light .glass-card {
-        background: rgba(255, 255, 255, 0.8);
-        border: 1px solid rgba(0, 0, 0, 0.1);
+        background: rgba(255, 255, 255, 0.85);
+        border: 1px solid rgba(0, 0, 0, 0.08);
       }
 
+      /* Float animation */
       .animate-float {
         animation: float 6s ease-in-out infinite;
       }
-
       @keyframes float {
         0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-20px); }
+        50% { transform: translateY(-16px); }
       }
 
+      /* Gold gradient text */
       .gold-gradient-text {
         background: linear-gradient(90deg, #F3BA2F 0%, #D4AF37 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      /* Scrollbar */
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: #2B2F36; border-radius: 3px; }
+      ::-webkit-scrollbar-thumb:hover { background: #F3BA2F; }
+
+      /* Mega menu transition */
+      .mega-menu {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(8px);
+        transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+      }
+      .mega-menu-trigger:hover .mega-menu,
+      .mega-menu-trigger:focus-within .mega-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      /* Accordion */
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.45s cubic-bezier(0.4,0,0.2,1), padding 0.3s ease;
+      }
+      .faq-answer.open {
+        max-height: 400px;
+      }
+
+      /* Section spacing */
+      .section-pad {
+        padding-top: 64px;
+        padding-bottom: 64px;
+      }
+      @media (min-width: 768px) {
+        .section-pad {
+          padding-top: 96px;
+          padding-bottom: 96px;
+        }
       }
     </style>
   <script type="importmap">

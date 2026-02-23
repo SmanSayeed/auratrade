@@ -2,17 +2,19 @@
 import React, { useState, useEffect, useCallback } from 'react';
 
 const REVIEWS = [
-  { name: 'Sou', text: 'The best trading company I have dealt with. Their financial managers are top-level, they give bonuses and investor rewards, and they offer precise training with high expertise.', country: '🇰🇼' },
-  { name: 'Bash Hab', text: 'Fast profits in a short period, highly accurate recommendations. Thank you to Mr. Saleh Al-Naeem for helping me with the recovery plan in my account.', country: '🇸🇦' },
-  { name: 'Hussein Nidal Abu Shawali', text: 'Honestly, the team is very cooperative and they follow with clients closely. Their explanation and communication style is excellent — nothing smoother.', country: '🇯🇴' },
-  { name: 'Ahmed Khalid', text: 'AuraTrade has completely changed my perspective on trading. The tools are incredibly intuitive and the support team is always there to guide me.', country: '🇦🇪' },
-  { name: 'Fatima Zahra', text: 'I love how easy it is to manage my portfolio. The real-time insights help me make informed decisions, and the bonuses are a great extra!', country: '🇲🇦' },
-  { name: 'Omar Al-Farsi', text: 'Professionalism at its best. The training sessions provided me with the skills I needed to succeed in the volatile crypto market.', country: '🇴🇲' }
+  { name: 'Sou Al-Rashidi', role: 'Professional Trader', text: 'The best trading company I have dealt with. Their financial managers are top-level, they give competitive bonuses and investor rewards with high expertise.', country: 'Kuwait', flag: '🇰🇼', stars: 5 },
+  { name: 'Bash Hab', role: 'Crypto Investor', text: 'Fast profits in a short period, highly accurate recommendations. Excellent recovery plan and the team genuinely cares about client outcomes.', country: 'Saudi Arabia', flag: '🇸🇦', stars: 5 },
+  { name: 'Hussein Nidal', role: 'Forex Trader', text: 'Honestly, the team is very cooperative and they follow up closely. Their communication and explanation style is excellent — nothing smoother.', country: 'Jordan', flag: '🇯🇴', stars: 5 },
+  { name: 'Ahmed Khalid', role: 'Stocks Trader', text: 'AuraTrade has completely changed my perspective on trading. The tools are incredibly intuitive and the support team is always there to guide me.', country: 'UAE', flag: '🇦🇪', stars: 5 },
+  { name: 'Fatima Zahra', role: 'Portfolio Manager', text: 'I love how easy it is to manage my portfolio. The real-time insights help me make informed decisions, and the bonuses are a great addition!', country: 'Morocco', flag: '🇲🇦', stars: 5 },
+  { name: 'Omar Al-Farsi', role: 'Day Trader', text: 'Professionalism at its best. The training sessions gave me the skills needed to succeed in the volatile crypto market. Highly recommend.', country: 'Oman', flag: '🇴🇲', stars: 5 },
 ];
+
+const CHUNK_SIZE = 3;
 
 export const Reviews: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const totalSlides = Math.ceil(REVIEWS.length / 3);
+  const totalSlides = Math.ceil(REVIEWS.length / CHUNK_SIZE);
 
   const nextSlide = useCallback(() => {
     setActiveIndex((prev) => (prev + 1) % totalSlides);
@@ -23,60 +25,91 @@ export const Reviews: React.FC = () => {
   };
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 5000);
+    const timer = setInterval(nextSlide, 5500);
     return () => clearInterval(timer);
   }, [nextSlide]);
 
   return (
-    <section className="py-6 md:py-12 bg-brand-light dark:bg-brand-black transition-colors duration-300">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center md:items-start text-center md:text-left mb-8 gap-10">
+    <section className="section-pad bg-gray-50 dark:bg-[#0D1018] transition-colors duration-300">
+      <div className="container mx-auto px-4 md:px-8">
+
+        {/* Section header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">
           <div className="max-w-xl">
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-center md:text-left leading-[1.2] text-brand-black dark:text-white mb-6">
-              Reviews of AuraTrade: <br className="hidden md:block" />
-              <span className="gold-gradient-text">What Our Users Are Saying</span>
+            <p className="text-brand-gold text-sm font-semibold uppercase tracking-widest mb-3">Testimonials</p>
+            <h2 className="section-heading text-brand-black dark:text-white">
+              What Our <span className="gold-gradient-text">Traders Say</span>
             </h2>
-            <p className="text-gray-500 dark:text-gray-400 text-sm md:text-base font-medium">
-              AuraTrade is committed to providing traders with a seamless and innovative experience.
-              Join thousands of satisfied traders worldwide.
+            <p className="sub-heading text-gray-500 dark:text-gray-400 mt-4">
+              Join thousands of satisfied traders worldwide already growing with AuraTrade.
             </p>
           </div>
-          <div className="flex gap-4">
+
+          {/* Navigation */}
+          <div className="flex items-center gap-3 shrink-0">
+            <div className="flex items-center gap-1 mr-4">
+              {Array.from({ length: totalSlides }).map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setActiveIndex(idx)}
+                  className={`h-1.5 transition-all duration-300 rounded-full ${activeIndex === idx ? 'w-8 bg-brand-gold' : 'w-2 bg-gray-300 dark:bg-brand-border hover:bg-brand-gold/50'}`}
+                  aria-label={`Slide ${idx + 1}`}
+                />
+              ))}
+            </div>
             <button
               onClick={prevSlide}
-              className="w-10 h-10 md:w-12 md:h-12 border border-brand-black/10 dark:border-brand-border rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-black transition-all group active:scale-95"
+              className="w-11 h-11 border border-gray-200 dark:border-brand-border rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-black hover:border-brand-gold transition-all active:scale-95"
             >
-              <span className="group-hover:-translate-x-0.5 transition-transform text-lg md:text-xl">←</span>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
             </button>
             <button
               onClick={nextSlide}
-              className="w-10 h-10 md:w-12 md:h-12 border border-brand-black/10 dark:border-brand-border rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-black transition-all group active:scale-95"
+              className="w-11 h-11 border border-gray-200 dark:border-brand-border rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-black hover:border-brand-gold transition-all active:scale-95"
             >
-              <span className="group-hover:translate-x-0.5 transition-transform text-lg md:text-xl">→</span>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
             </button>
           </div>
         </div>
 
+        {/* Carousel */}
         <div className="relative overflow-hidden">
           <div
             className="transition-transform duration-700 ease-in-out flex"
             style={{ transform: `translateX(-${activeIndex * 100}%)` }}
           >
-            {/* Slides - assuming 3 per slide on desktop, 1 on mobile */}
             {Array.from({ length: totalSlides }).map((_, slideIdx) => (
-              <div key={slideIdx} className="min-w-full grid grid-cols-1 md:grid-cols-3 gap-12 px-2">
-                {REVIEWS.slice(slideIdx * 3, slideIdx * 3 + 3).map((rev, idx) => (
-                  <div key={idx} className="flex flex-col gap-6 group">
-                    <div className="relative bg-white dark:bg-brand-dark/30 p-8 rounded-2xl border border-brand-black/5 dark:border-brand-border h-full shadow-sm hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
-                      <div className="absolute -top-3 left-8 text-brand-gold text-4xl font-serif">"</div>
-                      <p className="text-base text-brand-black dark:text-gray-300 leading-relaxed font-medium italic">
+              <div key={slideIdx} className="min-w-full grid grid-cols-1 md:grid-cols-3 gap-6">
+                {REVIEWS.slice(slideIdx * CHUNK_SIZE, slideIdx * CHUNK_SIZE + CHUNK_SIZE).map((rev, idx) => (
+                  <div key={idx} className="flex flex-col">
+                    <div className="relative bg-white dark:bg-brand-dark/40 p-7 rounded-2xl border border-gray-100 dark:border-brand-border/40 h-full hover:shadow-xl hover:shadow-black/5 hover:-translate-y-1 transition-all duration-300 flex flex-col">
+                      {/* Quote mark */}
+                      <div className="text-brand-gold text-4xl font-serif leading-none mb-4 opacity-60">"</div>
+
+                      {/* Stars */}
+                      <div className="flex gap-0.5 mb-4">
+                        {Array.from({ length: rev.stars }).map((_, i) => (
+                          <svg key={i} className="w-4 h-4 text-brand-gold fill-current" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        ))}
+                      </div>
+
+                      <p className="text-[15px] text-gray-600 dark:text-gray-300 leading-relaxed flex-grow">
                         {rev.text}
                       </p>
-                      <div className="mt-8 flex items-center gap-3">
-                        <span className="text-2xl filter drop-shadow-sm">{rev.country}</span>
-                        <div className="flex flex-col">
-                          <span className="font-bold text-xs text-brand-black dark:text-white uppercase tracking-wider">{rev.name}</span>
-                          <div className="flex text-brand-gold text-[10px]">★★★★★</div>
+
+                      <div className="mt-6 pt-5 border-t border-gray-100 dark:border-brand-border/30 flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-full bg-brand-gold/15 border border-brand-gold/20 flex items-center justify-center text-lg">
+                          {rev.flag}
+                        </div>
+                        <div>
+                          <div className="text-[14px] font-bold text-brand-black dark:text-white">{rev.name}</div>
+                          <div className="text-[12px] text-gray-400">{rev.role} · {rev.country}</div>
                         </div>
                       </div>
                     </div>
@@ -85,18 +118,6 @@ export const Reviews: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
-
-        {/* Indicators */}
-        <div className="flex justify-center gap-2 mt-6">
-          {Array.from({ length: totalSlides }).map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => setActiveIndex(idx)}
-              className={`h-1.5 transition-all duration-300 rounded-full ${activeIndex === idx ? 'w-8 bg-brand-gold' : 'w-2 bg-gray-300 dark:bg-brand-border hover:bg-brand-gold/50'}`}
-              aria-label={`Go to slide ${idx + 1}`}
-            />
-          ))}
         </div>
       </div>
     </section>
